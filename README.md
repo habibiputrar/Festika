@@ -4,6 +4,8 @@ Website informasi kompetisi dan simulasi pendaftaran FESTIKA UNAND. Repository i
 
 Demo menggunakan data contoh di browser. Tidak diperlukan Docker, database server, Supabase, SMTP, atau API key. Kode produksi dan data peserta sebenarnya tidak disertakan.
 
+Link Demo : https://festikademo.netlify.app/
+
 ## Menjalankan proyek
 
 Prasyarat: Node.js 24 dan npm. Gunakan versi Node yang sama untuk pengembangan dan build.
