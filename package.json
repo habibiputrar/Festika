@@ -1,0 +1,35 @@
+{
+    "name":  "festika-unand-demo",
+    "version":  "1.0.0",
+    "private":  true,
+    "scripts":  {
+                    "dev":  "next dev --hostname 127.0.0.1",
+                    "build":  "next build",
+                    "start":  "node scripts/serve.mjs",
+                    "lint":  "eslint app components lib next.config.ts",
+                    "typecheck":  "tsc --noEmit",
+                    "test":  "node --test tests/*.test.mjs",
+                    "test:browser":  "node tests/demo-browser.mjs",
+                    "postbuild":  "node scripts/prepare-static-export.mjs"
+                },
+    "dependencies":  {
+                         "@fontsource-variable/plus-jakarta-sans":  "^5.3.0",
+                         "@tailwindcss/postcss":  "4.3.3",
+                         "lucide-react":  "1.59.0",
+                         "next":  "16.4.2",
+                         "postcss":  "8.5.31",
+                         "react":  "19.3.1",
+                         "react-dom":  "19.3.1",
+                         "tailwindcss":  "4.3.3",
+                         "zod":  "4.6.7"
+                     },
+    "devDependencies":  {
+                            "@types/node":  "26.6.5",
+                            "@types/react":  "19.3.0",
+                            "@types/react-dom":  "19.3.0",
+                            "eslint":  "9.39.5",
+                            "eslint-config-next":  "16.4.2",
+                            "playwright":  "1.64.1",
+                            "typescript":  "6.0.3"
+                        }
+}

@@ -1,0 +1,4 @@
+import {LayoutDashboard,CalendarDays,Users,Check,ArrowRight,Search,MapPin,Plus,X,LogOut,FileText,SquarePen,Trash2,Menu,ShieldCheck,Eye,Sun,Moon,Monitor,BookOpen,Flag,Globe,Mail,Settings,Image,History,ChevronDown,ExternalLink,Upload,Copy,Clock,UserRound,Send} from 'lucide-react';
+const icons={grid:LayoutDashboard,calendar:CalendarDays,users:Users,check:Check,arrow:ArrowRight,search:Search,location:MapPin,plus:Plus,close:X,logout:LogOut,document:FileText,edit:SquarePen,trash:Trash2,menu:Menu,shield:ShieldCheck,eye:Eye,sun:Sun,moon:Moon,system:Monitor,book:BookOpen,flag:Flag,globe:Globe,mail:Mail,settings:Settings,image:Image,history:History,down:ChevronDown,external:ExternalLink,upload:Upload,copy:Copy,clock:Clock,user:UserRound,send:Send};
+export type IconName=keyof typeof icons;
+export function Icon({name,size=20}:{name:IconName;size?:number}){const Component=icons[name];return <Component size={size} strokeWidth={1.7} aria-hidden="true"/>;}

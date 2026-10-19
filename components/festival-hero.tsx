@@ -1,0 +1,11 @@
+import Image from 'next/image';
+import Link from './motion-link';
+import {Icon} from './icon';
+import {safeUrl,text,type Publication} from '@/lib/content-model';
+import type {FestikaEvent} from '@/lib/types';
+export function FestivalHero({hero,guidebook,events,demo=false}:{hero:Publication;guidebook?:Publication;events:FestikaEvent[];demo?:boolean}){
+ const title=text(hero.payload,'title','FESTIKA'),image=safeUrl(hero.payload.image),guide=safeUrl(guidebook?.payload.file),lead=text(hero.payload,'lead','Bangun karya. Uji kemampuan.');
+ return <section className="festival-hero hero-refined"><div className="hero-copy"><div className="hero-kicker"><span className="hero-kicker-line"/><span>{text(hero.payload,'eyebrow','FESTIVAL INFORMATIKA')}</span></div><h1>{title.startsWith('FESTIKA')?<><span className="hero-fest">FEST</span><span className="hero-ika">IKA{title.slice(7)}</span></>:title}</h1><p className="hero-lead">{lead}</p>{text(hero.payload,'theme')&&<p className="hero-theme">{text(hero.payload,'theme')}</p>}<p className="hero-description">{text(hero.payload,'description')}</p><div className="hero-actions">{events.length>0&&<Link href={demo?'/demo#kompetisi':'/kompetisi'} className="button primary">Jelajahi Kompetisi <Icon name="arrow" size={18}/></Link>}{guide&&<a className="button outline" href={guide} target="_blank" rel="noopener noreferrer"><Icon name="book" size={19}/>Buku Panduan</a>}</div><div className="hero-location"><span className="hero-location-icon"><Icon name="location" size={18}/></span><div><strong>Universitas Andalas</strong><span>Padang, Sumatera Barat</span></div></div></div>
+ {image&&<div className="hero-poster"><div className="hero-poster-heading"><span>RUANG UNTUK<br/><strong>IDE BESARMU.</strong></span><span className="hero-poster-spark" aria-hidden="true">✳</span></div><div className="hero-poster-art"><Image src={image} alt="" aria-hidden="true" width={480} height={480} priority unoptimized={image.startsWith('/media/')}/></div><div className="hero-poster-bottom"><span>RANCANG.<br/>TELITI. PECAHKAN.</span><div className="hero-poster-index"><strong>{String(events.length).padStart(2,'0')}</strong><span>PILIHAN<br/>KOMPETISI</span></div></div></div>}
+ </section>;
+}

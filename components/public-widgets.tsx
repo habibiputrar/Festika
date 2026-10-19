@@ -1,0 +1,17 @@
+'use client';
+import {useActionState,useEffect,useRef,useState} from 'react';
+import Image from 'next/image';
+import {Icon} from './icon';
+import {sendMessage} from '@/app/platform-actions';
+type ContactFeedback={ok:boolean;message:string;warning?:boolean};
+export function Gallery({images,featured=false,hideCaptions=false}:{images:{src:string;alt:string;caption:string}[];featured?:boolean;hideCaptions?:boolean}){
+ const [index,setIndex]=useState<number|null>(null),dialog=useRef<HTMLDialogElement>(null);
+ const isOpen=index!==null;
+ useEffect(()=>{const element=dialog.current;if(!isOpen){element?.close();return;}const root=document.documentElement,overflow=root.style.overflow,scrollY=window.scrollY;root.style.overflow='hidden';element?.showModal();window.scrollTo({top:scrollY,behavior:'instant'});return()=>{element?.close();root.style.overflow=overflow;window.scrollTo({top:scrollY,behavior:'instant'});};},[isOpen]);
+ const image=index===null?null:images[index];
+ return <><div className={'past-gallery'+(featured?' is-featured':'')}>{images.map((item,i)=><button key={item.src+i} onClick={()=>setIndex(i)} aria-label={'Perbesar '+item.alt}><Image src={item.src} alt={item.alt} width={960} height={540} sizes="(max-width:760px) 100vw, 33vw" loading="lazy" unoptimized/>{!hideCaptions&&<span>{item.caption}</span>}</button>)}</div><dialog ref={dialog} className="lightbox" aria-label="Preview dokumentasi" onCancel={()=>setIndex(null)} onClick={e=>{if(e.target===e.currentTarget)setIndex(null);}} onKeyDown={e=>{if(index===null)return;if(e.key==='ArrowRight')setIndex((index+1)%images.length);if(e.key==='ArrowLeft')setIndex((index-1+images.length)%images.length);}}><button className="icon-button lightbox-close" aria-label="Tutup gambar" onClick={()=>setIndex(null)}><Icon name="close"/></button>{image&&<><Image src={image.src} alt={image.alt} width={1440} height={960} unoptimized/><p>{image.caption||image.alt}</p><div className="button-row"><button className="button secondary" onClick={()=>setIndex(((index||0)-1+images.length)%images.length)}>Sebelumnya</button><span>{(index||0)+1} / {images.length}</span><button className="button secondary" onClick={()=>setIndex(((index||0)+1)%images.length)}>Berikutnya</button></div></>}</dialog></>;
+}
+export function MessageForm({demo=false}:{demo?:boolean}){
+ const [state,action,pending]=useActionState<ContactFeedback,FormData>(async (_previous,form)=>{if(demo)return {ok:false,message:'Pengiriman dinonaktifkan pada demo.'};return sendMessage({ok:false,message:''},form);},{ok:false,message:''});
+ return <form action={action} className="form-stack message-form"><div className="form-grid"><label>Nama<input name="nama" required minLength={2} maxLength={100} autoComplete="name"/></label><label>Email<input name="email" type="email" required maxLength={254} autoComplete="email"/></label></div><label>Subjek<input name="subject" required minLength={3} maxLength={160}/></label><label>Pesan<textarea name="message" rows={6} required minLength={10} maxLength={5000}/></label><div className="honeypot" aria-hidden="true"><label>Website<input name="website" tabIndex={-1} autoComplete="off"/></label></div>{state.message&&<p className={'feedback '+(state.warning?'warning':state.ok?'success':'error')} role={state.warning||!state.ok?'alert':'status'}>{state.message}</p>}<button className="button primary" disabled={pending||demo}>{pending?'Mengirim…':'Kirim Pesan'}<Icon name="send" size={17}/></button>{demo&&<p className="field-hint">Form dinonaktifkan pada demo.</p>}</form>;
+}

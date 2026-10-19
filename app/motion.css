@@ -1,0 +1,26 @@
+/* Navigation stays in Next.js; this layer only handles the visual handoff. */
+.route-curtain{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:24px;background:var(--bg);pointer-events:none;opacity:0;visibility:hidden;transition:opacity .12s ease,visibility 0s .18s}
+.route-curtain[hidden]{display:none}
+.route-curtain-cover{visibility:visible;opacity:1;transition:opacity .12s ease}
+.route-curtain-leave{visibility:visible;opacity:0;transition:opacity .18s ease}
+.route-signature{display:flex;align-items:center;gap:22px;max-width:100%}
+.route-signature>img{width:82px;height:82px;object-fit:contain;flex:none}
+.route-wordmark{display:grid;gap:12px;min-width:0}
+.route-wordmark strong{display:block;font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(42px,8vw,76px);font-weight:800;line-height:1;letter-spacing:-1px;white-space:nowrap}
+.route-wordmark strong>span:first-child{color:var(--teal-light)}.route-wordmark strong>span:last-child{color:var(--orange)}
+.route-signature-line{display:block;width:48px;height:3px;background:var(--orange);transform-origin:left}
+@media(prefers-reduced-motion:no-preference){
+ .route-curtain-cover .route-signature>img{animation:festika-mark-in .28s ease-out both}
+ .route-curtain-cover .route-wordmark strong{animation:festika-word-in .36s cubic-bezier(.22,.7,.3,1) .04s both}
+ .route-curtain-cover .route-signature-line{animation:festika-line-in .25s ease-out .14s both}
+ .public-site .is-revealed{animation-duration:.44s;animation-timing-function:cubic-bezier(.2,.65,.3,1);animation-delay:var(--reveal-delay,0ms)}
+ .hero-copy h1.is-revealed,.public-page-heading h1.is-revealed{animation-name:festika-heading-in;animation-duration:.5s}
+ .public-site .text-link>svg,.hero-actions .button>svg{transition:transform .18s ease}
+ .public-site .text-link:hover>svg,.hero-actions .button:hover>svg{transform:translateX(3px)}
+ @keyframes festika-mark-in{from{opacity:0;transform:translateY(8px) scale(.96)}to{opacity:1;transform:none}}
+ @keyframes festika-word-in{from{clip-path:inset(0 100% 0 0);transform:translateX(-8px)}to{clip-path:inset(0);transform:none}}
+ @keyframes festika-line-in{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+ @keyframes festika-heading-in{from{opacity:0;clip-path:inset(0 0 100% 0);transform:translateY(12px)}to{opacity:1;clip-path:inset(0);transform:none}}
+}
+@media(max-width:480px){.route-signature{gap:16px}.route-signature>img{width:62px;height:62px}.route-wordmark{gap:9px}.route-wordmark strong{font-size:50px}.route-signature-line{width:36px}}
+@media(prefers-reduced-motion:reduce){.route-curtain{display:none}.public-site .reveal-pending{opacity:1;transform:none}.public-site .is-revealed{animation:none}}

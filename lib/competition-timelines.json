@@ -1,0 +1,25 @@
+{
+  "karya-tulis-ilmiah": [
+    {"slug":"kti-pendaftaran","title":"Pendaftaran","start":"2026-04-27","end":"2026-05-22"},
+    {"slug":"kti-pengumpulan","title":"Pengumpulan karya","start":"2026-04-27","end":"2026-05-22"},
+    {"slug":"kti-seleksi","title":"Seleksi karya","start":"2026-04-16","end":"2026-05-22","description":"Tanggal awal seleksi pada sumber mendahului pembukaan pendaftaran dan masih perlu dikonfirmasi panitia."},
+    {"slug":"kti-finalis","title":"Pengumuman finalis","start":"2026-05-22"},
+    {"slug":"kti-tm","title":"Technical Meeting","start":"2026-05-23"},
+    {"slug":"kti-final","title":"Final dan presentasi","start":"2026-05-24"}
+  ],
+  "web-design": [
+    {"slug":"web-pendaftaran","title":"Pendaftaran","start":"2026-04-27","end":"2026-05-22"},
+    {"slug":"web-penyisihan","title":"Babak daring","start":"2026-04-28","end":"2026-05-22"},
+    {"slug":"web-penilaian","title":"Penilaian penyisihan","start":"2026-05-14","end":"2026-05-22"},
+    {"slug":"web-finalis","title":"Pengumuman finalis","start":"2026-05-22","end":"2026-05-23"},
+    {"slug":"web-tm","title":"Technical Meeting","start":"2026-05-23"},
+    {"slug":"web-final","title":"Final luring","start":"2026-05-24"}
+  ],
+  "capture-the-flag": [
+    {"slug":"ctf-pendaftaran","title":"Pendaftaran","start":"2026-04-27","end":"2026-05-22"},
+    {"slug":"ctf-tm","title":"Technical Meeting","start":"2026-05-23"},
+    {"slug":"ctf-penyisihan","title":"Babak penyisihan","start":"2026-05-24"},
+    {"slug":"ctf-final","title":"Semi-final dan grand-final","start":"2026-05-24"},
+    {"slug":"ctf-penutupan","title":"Penyerahan penghargaan dan penutupan","start":"2026-05-24"}
+  ]
+}

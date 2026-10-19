@@ -1,0 +1,64 @@
+{
+  "karya-tulis-ilmiah": {
+    "theme": "NextGen Tech: Creating the Future Today",
+    "details": "Kompetisi KTI FESTIKA 2026 mengajak pelajar menyusun gagasan ilmiah untuk persoalan yang mereka temukan di sekitar. Peserta mengembangkan penelitian, mengolah temuan, lalu merumuskan solusi yang dapat dipertanggungjawabkan melalui tulisan.\n\nKeaslian karya, ketepatan penggunaan sumber, dan kejujuran dalam penyajian hasil menjadi tanggung jawab peserta. Panitia bersama juri menangani pemeriksaan karya, penilaian, serta pelanggaran sesuai ketentuan lomba. Keputusan yang ditetapkan berlaku bagi seluruh peserta.",
+    "contact": "Panitia Demo | ",
+    "prizes": [
+      "Juara 1 | Rp300.000",
+      "Juara 2 | Rp200.000",
+      "Juara 3 | Rp100.000"
+    ],
+    "stages": [
+      "Pendaftaran",
+      "Pengumpulan karya",
+      "Seleksi karya",
+      "Pengumuman finalis",
+      "Technical Meeting (TM)",
+      "Babak final dan presentasi"
+    ],
+    "guidebook": "",
+    "poster": ""
+  },
+  "web-design": {
+    "theme": "NextGen Tech: Creating the Future Today",
+    "details": "Kompetisi Web Design FESTIKA 2026 terdiri dari penyisihan daring dan final luring. Pada penyisihan, setiap peserta merancang serta mengerjakan website sendiri berdasarkan tema panitia.\n\nPeserta yang lolos akan mengikuti Web Styling melalui live coding dan mempresentasikan karyanya kepada juri pada babak final. Keputusan kelolosan didasarkan pada penilaian hasil penyisihan. Arahan teknis disampaikan saat Technical Meeting dan melalui kanal komunikasi resmi lomba.",
+    "contact": "Panitia Demo | ",
+    "format": "hybrid",
+    "prizes": [
+      "Juara 1 | Rp300.000",
+      "Juara 2 | Rp200.000",
+      "Juara 3 | Rp100.000",
+      "Harapan 1 | Rp50.000"
+    ],
+    "stages": [
+      "Registrasi",
+      "Babak online",
+      "Penilaian babak online",
+      "Pengumuman finalis",
+      "Technical Meeting",
+      "Final offline"
+    ],
+    "guidebook": "",
+    "poster": ""
+  },
+  "capture-the-flag": {
+    "theme": "NextGen Tech: Creating the Future Today",
+    "details": "CTF FESTIKA 2026 menguji keterampilan keamanan siber melalui tantangan pada platform picoCTF. Peserta harus bertanding dengan jujur, sportif, dan bertanggung jawab dalam menggunakan teknologi.\n\nAlat bantu analisis, decoding, maupun enkripsi, termasuk CyberChef, dapat digunakan untuk menyelesaikan tantangan selama sesuai peraturan. Bantuan pihak luar tidak diperbolehkan. Panitia menetapkan keputusan akhir terkait penerapan aturan, keabsahan hasil, dan penanganan masalah teknis.",
+    "contact": "Panitia Demo | ",
+    "prizes": [
+      "Juara 1 | Rp1.250.000",
+      "Juara 2 | Rp1.000.000",
+      "Juara 3 | Rp750.000",
+      "Harapan 1 | Rp500.000"
+    ],
+    "stages": [
+      "Pendaftaran",
+      "Technical Meeting (TM)",
+      "Babak penyisihan",
+      "Babak semi-final dan grand-final",
+      "Pemberian hadiah dan penutupan lomba"
+    ],
+    "guidebook": "",
+    "poster": ""
+  }
+}

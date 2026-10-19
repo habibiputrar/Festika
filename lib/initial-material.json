@@ -1,0 +1,172 @@
+{
+  "content": [
+    {
+      "kind": "identity",
+      "title": "Identitas FESTIKA",
+      "slug": "identitas-festika",
+      "sort_order": 0,
+      "payload": {
+        "name": "FESTIKA",
+        "year": 2026,
+        "tagline": "Festival INFORMATIKA",
+        "logo": "/branding/Logo_Festika-04.webp"
+      }
+    },
+    {
+      "kind": "hero",
+      "title": "Beranda FESTIKA",
+      "slug": "beranda-festika",
+      "sort_order": 0,
+      "payload": {
+        "eyebrow": "FESTIVAL INFORMATIKA",
+        "title": "FESTIKA 2026",
+        "theme": "",
+        "description": "Ajang kompetisi dan pengembangan potensi di bidang teknologi digital.",
+        "image": "/branding/festika-pattern.svg"
+      }
+    },
+    {
+      "kind": "about",
+      "title": "Tentang FESTIKA",
+      "slug": "tentang-festika",
+      "sort_order": 0,
+      "payload": {
+        "text": "FESTIKA merupakan festival tahunan yang memberi ruang bagi pengembangan minat dan kemampuan di bidang teknologi digital melalui kegiatan kompetisi. Peserta dapat mengeksplorasi kreativitas, penalaran ilmiah, dan keterampilan teknologi dalam suasana yang menjunjung sportivitas."
+      }
+    },
+    {
+      "kind": "footer",
+      "title": "Footer FESTIKA",
+      "slug": "footer-festika",
+      "sort_order": 0,
+      "payload": {
+        "year": 2026,
+        "address": "Universitas Andalas · Padang",
+        "logo_hmif": "/branding/logo-hmif.svg",
+        "logo_fti": "/branding/LOGO_FTI.svg",
+        "logo_unand": "/branding/Logo_Unand.svg",
+        "credit_heading": "UI/UX and Web Developer",
+        "credit_label": "Habibi Putra Rizqullah",
+        "credit_url": "https://www.instagram.com/hxputra_/",
+        "sponsor_heading": "Sponsor Kami"
+      }
+    },
+    {
+      "kind": "faq",
+      "title": "Apa saja kompetisi FESTIKA?",
+      "slug": "faq-kompetisi",
+      "sort_order": 1,
+      "payload": {
+        "answer": "Kategori yang disiapkan adalah Web Design, Capture The Flag, dan Karya Tulis Ilmiah. Ketentuan tiap kompetisi dapat dilihat pada halaman detail dan buku panduan."
+      }
+    },
+    {
+      "kind": "faq",
+      "title": "Apakah ada biaya pendaftaran?",
+      "slug": "faq-biaya",
+      "sort_order": 2,
+      "payload": {
+        "answer": "Web Design dan Karya Tulis Ilmiah tidak dipungut biaya. Biaya Capture The Flag adalah Rp100.000 per tim. Pembayaran dilakukan sesuai instruksi panitia ketika pendaftaran dibuka."
+      }
+    },
+    {
+      "kind": "faq",
+      "title": "Bagaimana cara mendapat informasi jadwal?",
+      "slug": "faq-jadwal",
+      "sort_order": 3,
+      "payload": {
+        "answer": "Jadwal pendaftaran dan tahapan lomba akan ditampilkan setelah dikonfirmasi panitia. Hubungi kontak FESTIKA jika informasi yang kamu temukan berbeda."
+      }
+    }
+  ],
+  "events": [
+    {
+      "slug": "web-design",
+      "nama_event": "Web Design",
+      "deskripsi": "Uji kreativitas dan keterampilan merancang antarmuka serta pengalaman penggunaan website.",
+      "details": "Kompetisi perancangan website untuk mengembangkan kreativitas dan kemampuan teknis peserta. Ketentuan teknis selengkapnya tersedia pada buku panduan.",
+      "requirements": [
+        "Peserta mengerjakan karya secara individu.",
+        "Menjunjung orisinalitas dan sportivitas."
+      ],
+      "tipe": "individu",
+      "payment_basis": "free",
+      "fee_amount": 0,
+      "maks_tim": null,
+      "anggota_tim": null,
+      "min_anggota": null,
+      "tanggal": null,
+      "lokasi": "",
+      "kuota": null,
+      "status": "upcoming",
+      "registration_state": "closed",
+      "registration_start": null,
+      "registration_end": null,
+      "format": "unconfirmed",
+      "guidebook": "",
+      "contact": "Panitia Demo | ",
+      "payment_instructions": "Simulasi pembayaran. Gunakan file contoh; tidak ada transfer uang dalam demo ini.",
+      "poster": "",
+      "payment_form_url": ""
+    },
+    {
+      "slug": "capture-the-flag",
+      "nama_event": "Capture The Flag",
+      "deskripsi": "Asah kemampuan keamanan siber melalui tantangan yang menjunjung sportivitas dan etika digital.",
+      "details": "Kompetisi keamanan siber dalam format beregu. Setiap tim memiliki satu ketua sebagai perwakilan dalam komunikasi dengan panitia.",
+      "requirements": [
+        "Peserta aktif jenjang SMA/sederajat.",
+        "Satu tim terdiri dari 3 anggota.",
+        "Satu peserta hanya berada di satu tim pada kompetisi ini."
+      ],
+      "tipe": "tim",
+      "payment_basis": "team",
+      "fee_amount": 100000,
+      "maks_tim": 32,
+      "anggota_tim": 3,
+      "min_anggota": 3,
+      "tanggal": null,
+      "lokasi": "",
+      "kuota": 96,
+      "status": "upcoming",
+      "registration_state": "closed",
+      "registration_start": null,
+      "registration_end": null,
+      "format": "unconfirmed",
+      "guidebook": "",
+      "contact": "Panitia Demo | ",
+      "payment_instructions": "Simulasi pembayaran. Gunakan file contoh; tidak ada transfer uang dalam demo ini.",
+      "poster": "",
+      "payment_form_url": ""
+    },
+    {
+      "slug": "karya-tulis-ilmiah",
+      "nama_event": "Karya Tulis Ilmiah",
+      "deskripsi": "Kembangkan kemampuan analisis, penelitian, dan gagasan melalui penulisan ilmiah.",
+      "details": "Kompetisi penulisan ilmiah untuk mengembangkan gagasan berbasis ilmu pengetahuan dan teknologi. Format peserta akan diselaraskan dengan ketentuan panitia sebelum pendaftaran dibuka.",
+      "requirements": [
+        "Terbuka bagi pelajar SMA/sederajat.",
+        "Karya harus orisinal dan mengikuti etika ilmiah."
+      ],
+      "tipe": null,
+      "payment_basis": "free",
+      "fee_amount": 0,
+      "maks_tim": null,
+      "anggota_tim": null,
+      "min_anggota": null,
+      "tanggal": null,
+      "lokasi": "",
+      "kuota": null,
+      "status": "upcoming",
+      "registration_state": "closed",
+      "registration_start": null,
+      "registration_end": null,
+      "format": "unconfirmed",
+      "guidebook": "",
+      "contact": "Panitia Demo | ",
+      "payment_instructions": "Simulasi pembayaran. Gunakan file contoh; tidak ada transfer uang dalam demo ini.",
+      "poster": "",
+      "payment_form_url": ""
+    }
+  ]
+}
